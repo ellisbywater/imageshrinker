@@ -1,4 +1,4 @@
-const {app, BrowserWindow, Menu } = require('electron')
+const {app, BrowserWindow, Menu, ipcMain } = require('electron')
 
 // Set environment
 process.env.NODE_ENV = 'development'
@@ -27,16 +27,6 @@ function createMainWindow() {
     mainWindow.loadFile('./app/index.html')
 }
 
-function createAboutWindow() {
-    aboutWindow = new BrowserWindow({
-        title: 'About ImageShrink',
-        width: 300,
-        height: 300,
-        icon: './app/assets/icons/Icon_256x256.png'
-    })
-    aboutWindow.loadFile('./app/about.html')
-}
-
 
 app.whenReady().then(() => {
     createMainWindow()
@@ -62,8 +52,7 @@ const menu = [
             label: 'Help',
             submenu: [
                 {
-                    label: 'About',
-                    click: createAboutWindow()
+                    label: 'About'
                 }
             ]
         }
@@ -94,4 +83,8 @@ app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
         createMainWindow()
     }
+})
+
+ipcMain.on('image:minimize', (e, args) => {
+    console.log(args)
 })

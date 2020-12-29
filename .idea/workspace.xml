@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1581758-bb26-4b74-95a2-7a4f209a04fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/image-shrink.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/icons/Icon_1024x1024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/icons/Icon_16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/icons/Icon_256x256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/icons/Icon_32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/icons/icon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609186235184</updated>
       <workItem from="1609186236356" duration="1991000" />
-      <workItem from="1609263039228" duration="4616000" />
+      <workItem from="1609263039228" duration="5266000" />
     </task>
     <servers />
   </component>
