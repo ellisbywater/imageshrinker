@@ -5,12 +5,15 @@ const imagemin = require('imagemin')
 const imageminPng = require('imagemin-pngquant')
 const imageminJpeg = require('imagemin-mozjpeg')
 const slash = require("slash");
+const elog = require("electron-log")
 
 // Set environment
-process.env.NODE_ENV = 'development'
+process.env.NODE_ENV = 'production'
 
 const isDev = process.env.NODE_ENV !== 'production'
 const isDarwin = process.platform === "darwin"
+
+const publicAssets = path.join(__dirname, path.dirname('./app/assets'))
 
 let mainWindow
 let aboutWindow
@@ -20,7 +23,7 @@ function createMainWindow() {
         title: 'ImageShrink',
         width: isDev ? 800 : 500,
         height: 600,
-        icon: './app/assets/icons/Icon_256x256.png',
+        icon: publicAssets + 'icons/Icon_256x256.png',
         resizable: isDev,
         backgroundColor: 'white',
         webPreferences: {
@@ -108,10 +111,11 @@ async function shrinkImage({imgPath, quality, dest}) {
                 })
             ]
         })
-
+        elog.info(files)
         await shell.openPath(dest)
         mainWindow.webContents.send('image:done')
     } catch (e) {
         console.log(e)
+        elog.error(e)
     }
 }
